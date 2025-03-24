@@ -1,4 +1,4 @@
 print("Introdueix dos valors numèrics")
-num1 = float(input("Valor 1: "))
-num2 = float(input("Valor 2: "))
-print(num1+num2)
+num1 = int(input("Valor 1: "))
+num2 = int(input("Valor 2: "))
+print("La suma de",(num1),"i",(num2),"és:",(num1+num2))
