@@ -1,9 +1,9 @@
-def hores_segons(hores, minuts, segons):
-    return hores*3600 + minuts*60 + segons
+def segons_hores(segons):
+    hora = segons // 3600
+    minuts = (segons % 3600) // 60
+    segons_rest = segons % 60
+    return hora, minuts, segons_rest
+segons = int(input("Introdueix una hora en segons: "))
 
-hores = int(input("Introdueix l'hora actual: "))
-minuts = int(input("Intrdueix els minuts actuals: "))
-segons = int(input("Introdueix les segons acruals: "))
-
-total = hores_segons(hores, minuts, segons)
-print("l'hora actual en segons és", total)
+hora, minuts, segons_rest = segons_hores(segons)
+print(f"L'hora actual és {hora} hores {minuts} minuts i {segons_rest} segons")
