@@ -21,8 +21,15 @@ def grafic(vendes):
     plt.savefig("vendes_graf.png")
     print("El gràfic s'ha desat com 'vendes_graf.png'.")
 
+def mitjana():
+    mitjana_calc = sum(vendes) / len(vendes)
+    return mitjana_calc
+
 vendes = obtenir_vendes()
+
 if vendes:
     grafic(vendes)
+    mitjana_calc = mitjana()
+    print(f"La mitjana de vendes és: {mitjana_calc}")
 else:
     print("No s'han introduït dades de vendes.")
